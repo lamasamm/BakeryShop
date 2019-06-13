@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="myBakeryShop.ItemDetails"
+             BackgroundColor="Pink">
+    <ContentPage.Content>
+        
+        <StackLayout>
+
+
+            <Image x:Name="The_image" HeightRequest="200" WidthRequest="200"/>
+            <Label x:Name="MyItemName" HorizontalTextAlignment="Center" FontAttributes="Bold"/>
+            <Label x:Name="MyDiscription" HorizontalTextAlignment="Start"
+                   Margin="10,0,10,0" />
+            <Label x:Name="MyCal" HorizontalTextAlignment="Start"
+                   Margin="10,0,10,0"  />
+            <Label x:Name="MyPrice" HorizontalTextAlignment="Start"
+                   Margin="10,0,10,0" />
+            
+
+
+            <StackLayout Orientation="Horizontal">
+
+                <ImageButton x:Name="Call_ICON" Source="CALL_IMAGE.png" HorizontalOptions="CenterAndExpand"  Clicked="Call_ICON_Clicked"> </ImageButton>
+                <ImageButton x:Name="MAP_ICON" Source="MAP_IMAGE.png" HorizontalOptions="CenterAndExpand" Clicked="MAP_ICON_Clicked"></ImageButton>
+
+
+
+            </StackLayout>
+
+
+        </StackLayout>
+
+
+    </ContentPage.Content>
+</ContentPage>

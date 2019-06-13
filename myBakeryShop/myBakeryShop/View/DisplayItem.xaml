@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="myBakeryShop.DisplayItem"
+             BackgroundColor="Pink"
+             Title=""
+             >
+
+    <ContentPage.Content>
+
+
+        <StackLayout Padding="10,0,10,0">
+            <SearchBar TextChanged="SearchBar_TextChanged" ></SearchBar>
+            
+                <ListView ItemsSource="{ Binding itemlist}" HasUnevenRows="True" ItemSelected="MenueItems_ItemSelected" x:Name="MenueItems">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout BackgroundColor="Pink"
+                       
+                              Orientation="Horizontal">
+                            
+                            <Image Source="{Binding Image}" HeightRequest="50" WidthRequest="50" />
+                            <StackLayout HorizontalOptions="StartAndExpand">
+                                
+                                <Label Text="{Binding ItemName}"
+                                TextColor="White"
+                                      />
+                                <Label Text="{Binding Price}"
+                                
+                                TextColor="White" 
+                                       />
+                            </StackLayout>
+
+                                <Button Text="❤️"
+                                    BorderColor="Silver"
+                                    BackgroundColor="HotPink"
+                                    VerticalOptions="Center"
+                                    WidthRequest="40"
+                                    HeightRequest="50"
+                                    Clicked="Button_Clicked"
+                                    />
+
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+      
+        </ListView>
+
+
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>
